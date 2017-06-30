@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Coffee Run</title>
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+      form :focus:required:invalid {
+        border-color:#a94442;
+      }
+    </style>
+
+</head>
+
+<body class="container">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header>
+        <h1>CoffeeRun</h1>
+    </header>
+
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-coffee-order="form" action="">
+
+                    <div class="form-group">
+                        <label for="coffeeOrder">Coffee Order</label>
+                        <input class="form-control" name="coffee" id="coffeeOrder" autofocus required pattern="[a-zA-Z]+">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="rose@tyler.com" required>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                          <input type="radio" name="size" value="short">
+                          Short
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                          <input type="radio" name="size" value="tall" checked>
+                          Tall
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                          <input type="radio" name="size" value="grande">
+                          Grande
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="flavorShot">Flavor Shot</label>
+                        <select name="flavor" id="flavorShot" class="form-control">
+                          <option value="">None</option>
+                          <option value="caramel">Caramel</option>
+                          <option value="almond">Almond</option>
+                          <option value="mocha">Mocha</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="strengthLevel">Coffee Rating</label>
+                        <input type="range" name="strength" id="strengthLevel" value="30">
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Pending Orders:</h4>
+                <div data-coffee-order="checklist"> </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <script src="js/validation.js" charset="utf-8"></script>
+    <script src="js/checklist.js" charset="utf-8"></script>
+    <script src="js/formhandler.js" charset="utf-8"></script>
+    <script src="js/datastore.js" charset="utf-8"></script>
+    <script src="js/truck.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+
+
+</body>
+
+</html>
